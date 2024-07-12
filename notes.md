@@ -6,7 +6,9 @@ In continue to **NOHZ_FULL** and cpu isolation.
 In theory, we should leave 1 or 2 cores in each CCX for doing "housekeeping" workload as stated in the "CPU Isolation Introduction" guide.
 By default, core 0 will always be reserved, even if I pass `boot.kernelParams ["nohz_full=0-11"]` for example.
 
-We probably want to make sure that CPU "bottlenecked" games use only CPU cores ("physical" probably?) that reside on one CCX. Why? Because we want to avoid latency penalty because of communication between two CCX.
+We probably want to make sure that CPU "bottlenecked" games use only CPU cores ("physical" probably?) that reside on one CCX.
+
+Why? Because we want to avoid latency penalty because of communication between two CCX.
 
 My AMD 5900 CPU has two CCX.
 
